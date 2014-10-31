@@ -20,6 +20,16 @@
 <area shape="rect" coords="529,302,531,304" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
 </map>
 
+
+<script language="javascript">
+function openPDF(sPDF) {
+	PDFViewer.open('file://"+sPDF+"','sample.pdf', function (msg) {
+    console.log(msg);
+	});
+ }
+ </script>
+ 
+ <a href="javascript:openPDF('pdf/Service.pdf');">PDF</a>
      
 
 </div>
