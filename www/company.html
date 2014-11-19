@@ -270,7 +270,32 @@
                         </div>
                         <!-- END Calendar Header -->
                         
-                        company
+                        
+                        
+                        
+                        
+                        <div class="table-responsive">
+                                <table id="example-datatable" class="table table-striped table-bordered table-vcenter">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" style="width: 50px;">ID</th>
+                                            <th>User</th>
+                                            <th>Email</th>
+                                            <th style="width: 120px;">Status</th>
+                                            <th class="text-center" style="width: 75px;"><i class="fa fa-flash"></i></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        
+                        
+                        
+                        
+                        
+                        
                     </div>
                     <!-- END Page Content -->
                 </div>
@@ -306,6 +331,28 @@
 			});
 		
 			
+		</script>
+        <script src="js/pages/uiTables.js"></script>
+        
+		<script>
+		
+		$(document).ready(function() {
+		
+		/* Initialize Datatables */
+        
+
+		
+			$('#example-datatable').dataTable( {
+				ajax: true,
+				ajaxUrl: 'ajax/contacts.json',
+				ajaxOnLoad: true,
+				records: []
+				
+				//"aoColumnDefs": [ { "bSortable": false, "aTargets": [ 4 ] } ],
+                //"iDisplayLength": 10,
+                //"aLengthMenu": [[5, 10, 20], [5, 10, 20]]
+			} );
+		} );
 		</script>
     </body>
 </html>
